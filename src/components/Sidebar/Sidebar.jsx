@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './Sidebar.css'
 import { assets } from '../../assets/assets'
+import { Context } from '../../context/Context'
 
 const Sidebar = () => {
 
     const [extended, setExtended] = useState(false)
+    const { logout } = useContext(Context)
 
 
     return (
@@ -39,6 +41,10 @@ const Sidebar = () => {
                 <div className="bottom-item recent-entry">
                     <img src={assets.setting_icon} alt="" />
                     {extended?<p>Settings</p>:null}
+                </div>
+                <div className="bottom-item recent-entry" onClick={() => logout()}>
+                    <img src={assets.send_icon} style={{transform: 'rotate(180deg)'}} alt="" />
+                    {extended ? <p>Logout</p> : null}
                 </div>
             </div>
         </div>

@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './Main.css'
 import { assets } from '../../assets/assets'
 import { generateResponse } from '../../config/gemini.js'
+import { Context } from '../../context/Context'
 
 const Main = () => {
+    const { user } = useContext(Context)
     const [prompt, setPrompt] = useState('')
     const [messages, setMessages] = useState([
         { role: 'assistant', text: 'Ask me anything and I’ll help you with a thoughtful response.' }
@@ -52,11 +54,14 @@ const Main = () => {
         <div className='main'>
             <div className="nav">
                 <p>ThinkBot</p>
-                <img src={assets.user_icon} alt="User avatar" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <p style={{ fontSize: '14px', color: '#555' }}>{user?.username}</p>
+                    <img src={assets.user_icon} alt="User avatar" />
+                </div>
             </div>
             <div className="main-container">
                 <div className="greet">
-                    <p><span>Hello, I'm ThinkBot!</span></p>
+                    <p><span>Hello, {user?.username || 'Guest'}!</span></p>
                     <p>How can I assist you today?</p>
                 </div>
 
