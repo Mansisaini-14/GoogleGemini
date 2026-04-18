@@ -1,0 +1,183 @@
+.main{
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+}
+
+.main .nav{
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-size: 22px;
+padding: 20px;
+color:#585858
+}
+
+.main .nav img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.main-container {
+ 
+  margin: auto;
+  max-width: 900px;
+}
+
+.main .greet{
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.main .greet span{
+    background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.main .cards{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+gap: 15px;
+padding: 0 20px 20px;
+}
+
+.main .card{
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.main .card img{
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p{
+    color: #585858;
+    font-size: 17px;
+}
+
+.main .card:hover{
+    background-color: #dfe4ea;
+}
+
+.main-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 12px 22px;
+    border-radius: 50px;
+}
+
+.search-box img{
+    width: 24px;
+    cursor: pointer;
+}
+
+.search-box input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+    color: #1f2937;
+}
+
+.search-box button{
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.search-box div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .bottom-info{
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+.send-button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.main-status,
+.main-error{
+    margin: 12px 20px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.main-error{
+    color: #dc2626;
+}
+
+.prompt-panel{
+    background: rgba(240, 244, 249, 0.95);
+    border-radius: 24px;
+    padding: 28px;
+    margin: 10px 20px 30px;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.message{
+    max-width: 100%;
+    padding: 18px 22px;
+    border-radius: 20px;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.message.user{
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    align-self: flex-end;
+}
+
+.message.assistant{
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    align-self: flex-start;
+}
