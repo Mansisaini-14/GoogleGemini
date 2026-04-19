@@ -2,9 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f0f4f9;
+  height: 83vh;
+  width: 84vh;
+  background-color: #b5c6dc;
   font-family: 'Outfit', sans-serif;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 13px;
 }
 
 .auth-box {
