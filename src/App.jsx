@@ -27,7 +27,7 @@ const App = () => {
           path="/" 
           element={
             user ? (
-              <div style={{ display: 'flex', height: '100vh' }}>
+              <div style={{ display: 'flex', height: '100vh' ,width: '100vw'}}>
                 <Sidebar />
                 <Main />
               </div>
