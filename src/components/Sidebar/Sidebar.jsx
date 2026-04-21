@@ -30,7 +30,7 @@ const Sidebar = () => {
                 }
             </div>
             <div className="bottom">
-                <div className="bottom-item recent-entry">
+                {/* <div className="bottom-item recent-entry">
                     <img src={assets.question_icon} alt="" />
                     {extended?<p>Help</p>:null}
                 </div>
@@ -41,7 +41,7 @@ const Sidebar = () => {
                 <div className="bottom-item recent-entry">
                     <img src={assets.setting_icon} alt="" />
                     {extended?<p>Settings</p>:null}
-                </div>
+                </div> */}
                 <div className="bottom-item recent-entry" onClick={() => logout()}>
                     <img src={assets.send_icon} style={{transform: 'rotate(180deg)'}} alt="" />
                     {extended ? <p>Logout</p> : null}
